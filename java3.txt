@@ -1,0 +1,23 @@
+A subclass exception must appear before super-class exception. Justify this with suitable
+Java programs
+
+public class Two {
+    public static void main(String[] args) {
+        try{
+            System.out.println(10/0);
+        }
+        catch(ArrayIndexOutOfBoundsException e){
+            System.out.println(e.getMessage()+" occured.");
+        }
+        catch(NullPointerException e){
+            System.out.println(e.getMessage()+" occured.");
+        }
+        catch(ArithmeticException e){
+            System.out.println(e.getMessage()+ " occured.");
+        }
+        catch(Exception e){
+            System.out.println("This is main.");
+        }
+       
+    }
+}
